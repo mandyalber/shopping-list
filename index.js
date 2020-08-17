@@ -2,7 +2,7 @@ $(function () {
     //enter items by hitting "Return" or clicking the "Add item" button
     $('#js-shopping-list-form').on('submit', function(event){
         event.preventDefault()
-        const newItem = $('#shopping-list-entry').val('')
+        const newItem = $(this).find("#shopping-list-entry").val()
 
         $('#shopping-list-entry').val('')
 
