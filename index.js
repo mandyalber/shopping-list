@@ -3,6 +3,9 @@ $(function () {
     $('#js-shopping-list-form').on('submit', function(event){
         event.preventDefault()
         const newItem = $('#shopping-list-entry').val('')
+
+        $('#shopping-list-entry').val('')
+
         $('.shopping-list').append(
             `<li><span class="shopping-item">${newItem}</span>
                 <div class="shopping-item-controls">
@@ -14,8 +17,7 @@ $(function () {
                     </button>
                 </div>
             </li>`
-        )
-        $(this).trigger('reset')
+        )        
     })
     //check and uncheck items on the list by clicking the "Check" button
     $('.shopping-list').on('click', '.shopping-item-toggle', function(event){
